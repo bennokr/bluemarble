@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blue Marble</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+   <style type="text/css">
+   		#mapid { height: 512px; }
+   		.leaflet-container { background: #000; }
+   </style>
+</head>
+<body>
+	 <div id="mapid"></div>
+	 <script type="text/javascript">
+	 	var map = L.map('mapid', {
+	      minZoom: 0,
+	      maxZoom: 6
+	    }).setView([52, 5], 6);
+	 	L.tileLayer('./tiles_gif/{z}/{x}/{y}.gif').addTo(map)
+	 </script>
+</body>
+</html>
